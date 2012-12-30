@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<matrix-run>
+  <actions>
+    <hudson.model.ParametersAction>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>BUIILD_BRANCH</name>
+          <description>Branch to build</description>
+          <value>origin/release-0.2.3</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UpstreamCause>
+          <upstreamProject>tor-multi</upstreamProject>
+          <upstreamUrl>job/tor-multi/</upstreamUrl>
+          <upstreamBuild>2</upstreamBuild>
+          <upstreamCauses>
+            <hudson.model.Cause_-UserIdCause>
+              <userId>admin</userId>
+            </hudson.model.Cause_-UserIdCause>
+          </upstreamCauses>
+        </hudson.model.Cause_-UpstreamCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <hudson.matrix.MatrixConfiguration_-ParentBuildAction/>
+    <hudson.plugins.git.util.BuildData>
+      <buildsByBranchName>
+        <entry>
+          <string>origin/release-0.2.3</string>
+          <hudson.plugins.git.util.Build>
+            <revision>
+              <sha1>17c24b3118224d6536c41fa4e1493a831fb29f0a</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/release-0.2.3</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>2</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>origin/maint-0.1.2</string>
+          <hudson.plugins.git.util.Build>
+            <revision>
+              <sha1>8608e6823e12856f0c3ca432587c950e0ddb3044</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/maint-0.1.2</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>1</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
+      <remoteUrls>
+        <string>https://git.torproject.org/tor.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction>
+      <build class="matrix-run" reference="../../.."/>
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <no-comparator/>
+        <entry>
+          <string>origin/release-0.2.3</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/home/jenkins/workspace/tor-multi/ARCHITECTURE/amd64/SUITE/wheezy</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <net.praqma.jenkins.plugin.reloaded.MatrixReloadedAction>
+      <checked>ARCHITECTURE=amd64,SUITE=wheezy</checked>
+    </net.praqma.jenkins.plugin.reloaded.MatrixReloadedAction>
+  </actions>
+  <number>2</number>
+  <result>SUCCESS</result>
+  <duration>287062</duration>
+  <charset>US-ASCII</charset>
+  <keepLog>false</keepLog>
+  <builtOn>dixie.torproject.org</builtOn>
+  <workspace>/home/jenkins/workspace/tor-multi/ARCHITECTURE/amd64/SUITE/wheezy</workspace>
+  <hudsonVersion>1.480.1</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</matrix-run>

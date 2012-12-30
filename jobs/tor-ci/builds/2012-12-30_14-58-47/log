@@ -1,0 +1,26 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZu/dLi1CL9xJTczDwAwD7+acAAAAA=[0mJenkins Administrator
+Building remotely on [8mha:AAAAqh+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyREgY5/eT83ILSktQi/ZTMisxUvZL8ooKi/KzU5BK9/KJ0AKSQpVXTAAAA[0mdixie.torproject.org in workspace /home/jenkins/workspace/tor-multi
+Checkout:tor-multi / /home/jenkins/workspace/tor-multi - hudson.remoting.Channel@186c5ac4:dixie.torproject.org
+Using strategy: Default
+Cloning the remote Git repository
+Cloning repository https://git.torproject.org/tor.git
+git --version
+git version 1.7.2.5
+Fetching upstream changes from https://git.torproject.org/tor.git
+Seen branch in repository origin/HEAD
+Seen branch in repository origin/maint-0.1.2
+Seen branch in repository origin/maint-0.2.0
+Seen branch in repository origin/maint-0.2.1
+Seen branch in repository origin/maint-0.2.2
+Seen branch in repository origin/maint-0.2.3
+Seen branch in repository origin/master
+Seen branch in repository origin/release-0.2.1
+Seen branch in repository origin/release-0.2.2
+Seen branch in repository origin/release-0.2.3
+Commencing build of Revision 8608e6823e12856f0c3ca432587c950e0ddb3044 (origin/maint-0.1.2)
+Checking out Revision 8608e6823e12856f0c3ca432587c950e0ddb3044 (origin/maint-0.1.2)
+No change to record in branch origin/maint-0.1.2
+Triggering [8mha:AAAAvR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYj/az8JP2S/CLd3NKckkx9PX3HIGcPzxBX55DQIFfbxNwUMxOd4FCggG1xYWlqalWqPgDaJp/U5wAAAA==[0mamd64,squeeze
+Triggering [8mha:AAAAvB+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZD/az8JP2S/CLd3NKckkx9PX3HIGcPzxBX55DQIFfbxNwUMxOd4FCggG15RmpqVaU+ALsrrhjmAAAA[0mamd64,wheezy
+Touchstone configurations resulted in FAILURE, so aborting...
+Finished: FAILURE

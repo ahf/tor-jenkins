@@ -7,9 +7,9 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <net.uaznia.lukanus.hudson.plugins.gitparameter.GitParameterDefinition>
-          <name></name>
+          <name>Tag</name>
           <description></description>
-          <uuid>4040cf8f-22b7-4106-af36-2eb5da47aaa1</uuid>
+          <uuid>7fdf9c26-4339-4770-9ed4-2bf52f8f44ff</uuid>
           <type>PT_TAG</type>
           <branch></branch>
           <defaultValue></defaultValue>

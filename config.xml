@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
-  <disabledAdministrativeMonitors/>
+  <disabledAdministrativeMonitors>
+    <string>jenkins.security.RekeySecretAdminMonitor</string>
+  </disabledAdministrativeMonitors>
   <version>1.480.1</version>
   <numExecutors>0</numExecutors>
   <mode>NORMAL</mode>
@@ -32,7 +34,7 @@
         <host>dixie.torproject.org</host>
         <port>22</port>
         <username>jenkins</username>
-        <password>9uuDD9ZsogeBxyTJYUVlTA==</password>
+        <password>atkaZQiiNc0Y1x5LMijCyA==</password>
         <privatekey>/home/jenkins/.ssh/id_rsa</privatekey>
       </launcher>
       <label>Linux Debian</label>

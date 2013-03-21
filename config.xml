@@ -24,6 +24,11 @@
   <clouds/>
   <slaves>
     <slave>
+      <temporaryOfflineCause class="hudson.node_monitors.DiskSpaceMonitorDescriptor$DiskSpace">
+        <path>/home/jenkins</path>
+        <size>762769408</size>
+        <triggered>true</triggered>
+      </temporaryOfflineCause>
       <name>dixie.torproject.org</name>
       <description></description>
       <remoteFS>/home/jenkins</remoteFS>

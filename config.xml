@@ -37,7 +37,7 @@
         <password>atkaZQiiNc0Y1x5LMijCyA==</password>
         <privatekey>/home/jenkins/.ssh/id_rsa</privatekey>
       </launcher>
-      <label>Linux Debian</label>
+      <label>Linux Debian amd64 i386</label>
       <nodeProperties/>
     </slave>
   </slaves>

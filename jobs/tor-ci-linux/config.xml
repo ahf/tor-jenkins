@@ -89,7 +89,7 @@
   </triggers>
   <builders>
     <hudson.tasks.Shell>
-      <command>/home/weasel/build-wrap</command>
+      <command>/home/jenkins/jenkins-tools/slaves/linux/tor/build-wrapper</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

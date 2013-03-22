@@ -36,12 +36,8 @@
       <numExecutors>3</numExecutors>
       <mode>NORMAL</mode>
       <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
-      <launcher class="hudson.plugins.sshslaves.SSHLauncher">
-        <host>dixie.torproject.org</host>
-        <port>22</port>
-        <username>jenkins</username>
-        <password>atkaZQiiNc0Y1x5LMijCyA==</password>
-        <privatekey>/home/jenkins/.ssh/id_rsa</privatekey>
+      <launcher class="hudson.slaves.CommandLauncher">
+        <agentCommand>ssh jenkins@dixie.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>
       </launcher>
       <label>Linux Debian amd64 i386 squeeze wheezy lucid natty oneiric precise quantal sid</label>
       <nodeProperties/>

@@ -44,9 +44,10 @@
     <gitConfigName></gitConfigName>
     <gitConfigEmail></gitConfigEmail>
     <skipTag>false</skipTag>
+    <includedRegions></includedRegions>
     <scmName></scmName>
   </scm>
-  <canRoam>false</canRoam>
+  <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
@@ -78,7 +79,6 @@
       </values>
     </hudson.matrix.LabelExpAxis>
   </axes>
-  <combinationFilter></combinationFilter>
   <builders>
     <hudson.tasks.Shell>
       <command>/home/jenkins/jenkins-tools/slaves/linux/stem/build-wrapper</command>
@@ -87,6 +87,9 @@
   <publishers/>
   <buildWrappers>
     <hudson.plugins.timestamper.TimestamperBuildWrapper/>
+    <matrixtieparent.BuildWrapperMtp>
+      <labelName>Debian</labelName>
+    </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>
   <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
     <runSequentially>true</runSequentially>

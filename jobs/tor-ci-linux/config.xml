@@ -22,6 +22,12 @@
       <values>
         <string>squeeze</string>
         <string>wheezy</string>
+        <string>lucid</string>
+        <string>natty</string>
+        <string>oneiric</string>
+        <string>precise</string>
+        <string>quantal</string>
+        <string>sid</string>
       </values>
     </hudson.matrix.LabelExpAxis>
   </axes>

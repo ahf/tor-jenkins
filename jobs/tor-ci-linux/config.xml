@@ -21,7 +21,7 @@
       <name>SUITE</name>
       <values>
         <string>squeeze</string>
-        <string>amd64</string>
+        <string>wheezy</string>
       </values>
     </hudson.matrix.LabelExpAxis>
   </axes>

@@ -25,6 +25,18 @@
   <clouds/>
   <slaves>
     <slave>
+      <temporaryOfflineCause class="hudson.slaves.OfflineCause$SimpleOfflineCause">
+        <description>
+          <holder>
+            <owner>hudson.slaves.Messages</owner>
+          </holder>
+          <key>SlaveComputer.DisconnectedBy</key>
+          <args>
+            <string>admin</string>
+            <string></string>
+          </args>
+        </description>
+      </temporaryOfflineCause>
       <name>dixie.torproject.org</name>
       <description></description>
       <remoteFS>/home/jenkins</remoteFS>

@@ -3,65 +3,7 @@
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties>
-    <job-metadata>
-      <values class="linked-list">
-        <metadata-tree>
-          <name>job-info</name>
-          <parent class="job-metadata" reference="../../.."/>
-          <generated>true</generated>
-          <exposedToEnvironment>false</exposedToEnvironment>
-          <children class="linked-list">
-            <metadata-tree>
-              <name>last-saved</name>
-              <description></description>
-              <parent class="metadata-tree" reference="../../.."/>
-              <generated>true</generated>
-              <exposedToEnvironment>false</exposedToEnvironment>
-              <children class="linked-list">
-                <metadata-date>
-                  <name>time</name>
-                  <description></description>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <value>
-                    <time>1364033461653</time>
-                    <timezone>Etc/UTC</timezone>
-                  </value>
-                  <checked>false</checked>
-                </metadata-date>
-                <metadata-tree>
-                  <name>user</name>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <children class="linked-list">
-                    <metadata-string>
-                      <name>display-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>Jenkins Administrator</value>
-                    </metadata-string>
-                    <metadata-string>
-                      <name>full-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>Jenkins Administrator</value>
-                    </metadata-string>
-                  </children>
-                </metadata-tree>
-              </children>
-            </metadata-tree>
-          </children>
-        </metadata-tree>
-      </values>
-    </job-metadata>
-  </properties>
+  <properties/>
   <scm class="hudson.plugins.git.GitSCM">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
@@ -113,7 +55,10 @@
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
-      <command>SUITE=squeeze ARCHITECTURE=amd64 /home/jenkins/jenkins-tools/slaves/linux/stem-tor-ci/build-wrapper</command>
+      <command>python ./run_tests.py --unit</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>python ./run_tests.py --tor src/or/tor --integ --target RUN_ALL</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

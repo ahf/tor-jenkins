@@ -9,65 +9,7 @@
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
   <keepDependencies>false</keepDependencies>
-  <properties>
-    <job-metadata>
-      <values class="linked-list">
-        <metadata-tree>
-          <name>job-info</name>
-          <parent class="job-metadata" reference="../../.."/>
-          <generated>true</generated>
-          <exposedToEnvironment>false</exposedToEnvironment>
-          <children class="linked-list">
-            <metadata-tree>
-              <name>last-saved</name>
-              <description></description>
-              <parent class="metadata-tree" reference="../../.."/>
-              <generated>true</generated>
-              <exposedToEnvironment>false</exposedToEnvironment>
-              <children class="linked-list">
-                <metadata-date>
-                  <name>time</name>
-                  <description></description>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <value>
-                    <time>1364052204309</time>
-                    <timezone>Etc/UTC</timezone>
-                  </value>
-                  <checked>false</checked>
-                </metadata-date>
-                <metadata-tree>
-                  <name>user</name>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <children class="linked-list">
-                    <metadata-string>
-                      <name>display-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>Jenkins Administrator</value>
-                    </metadata-string>
-                    <metadata-string>
-                      <name>full-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>Jenkins Administrator</value>
-                    </metadata-string>
-                  </children>
-                </metadata-tree>
-              </children>
-            </metadata-tree>
-          </children>
-        </metadata-tree>
-      </values>
-    </job-metadata>
-  </properties>
+  <properties/>
   <scm class="hudson.plugins.git.GitSCM">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
@@ -102,6 +44,7 @@
     <gitConfigName></gitConfigName>
     <gitConfigEmail></gitConfigEmail>
     <skipTag>false</skipTag>
+    <includedRegions></includedRegions>
     <scmName></scmName>
   </scm>
   <assignedNode>Linux</assignedNode>
@@ -120,16 +63,26 @@
       <projectName>tor-ci-stem-base</projectName>
       <filter></filter>
       <target></target>
-      <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
-        <stable>false</stable>
-      </selector>
-      <flatten>false</flatten>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>SUITE=squeeze ARCHITECTURE=amd64 /home/jenkins/jenkins-tools/slaves/linux/build-wrapper</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.plugins.emailext.ExtendedEmailPublisher>
+      <recipientList>formorer@formorer.de</recipientList>
+      <configuredTriggers/>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <attachmentsPattern></attachmentsPattern>
+      <presendScript></presendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo>$DEFAULT_RECIPIENTS</replyTo>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
+  </publishers>
   <buildWrappers>
     <hudson.plugins.timestamper.TimestamperBuildWrapper/>
   </buildWrappers>

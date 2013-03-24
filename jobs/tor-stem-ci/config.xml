@@ -9,65 +9,7 @@
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
   <keepDependencies>false</keepDependencies>
-  <properties>
-    <job-metadata>
-      <values class="linked-list">
-        <metadata-tree>
-          <name>job-info</name>
-          <parent class="job-metadata" reference="../../.."/>
-          <generated>true</generated>
-          <exposedToEnvironment>false</exposedToEnvironment>
-          <children class="linked-list">
-            <metadata-tree>
-              <name>last-saved</name>
-              <description></description>
-              <parent class="metadata-tree" reference="../../.."/>
-              <generated>true</generated>
-              <exposedToEnvironment>false</exposedToEnvironment>
-              <children class="linked-list">
-                <metadata-date>
-                  <name>time</name>
-                  <description></description>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <value>
-                    <time>1364111294985</time>
-                    <timezone>Etc/UTC</timezone>
-                  </value>
-                  <checked>false</checked>
-                </metadata-date>
-                <metadata-tree>
-                  <name>user</name>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <children class="linked-list">
-                    <metadata-string>
-                      <name>display-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>Jenkins Administrator</value>
-                    </metadata-string>
-                    <metadata-string>
-                      <name>full-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>Jenkins Administrator</value>
-                    </metadata-string>
-                  </children>
-                </metadata-tree>
-              </children>
-            </metadata-tree>
-          </children>
-        </metadata-tree>
-      </values>
-    </job-metadata>
-  </properties>
+  <properties/>
   <scm class="hudson.plugins.git.GitSCM">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
@@ -130,7 +72,98 @@
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher>
       <recipientList>formorer@formorer.de</recipientList>
-      <configuredTriggers/>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>false</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
+        <hudson.plugins.emailext.plugins.trigger.AbortedTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>false</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.AbortedTrigger>
+        <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>false</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
+        <hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>false</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>
+        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>false</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+        <hudson.plugins.emailext.plugins.trigger.FixedTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>false</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FixedTrigger>
+      </configuredTriggers>
       <contentType>default</contentType>
       <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
       <defaultContent>$DEFAULT_CONTENT</defaultContent>

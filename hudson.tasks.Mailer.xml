@@ -2,7 +2,7 @@
 <hudson.tasks.Mailer_-DescriptorImpl>
   <helpRedirect/>
   <hudsonUrl>http://jenkins.torproject.org/</hudsonUrl>
-  <adminAddress>Adresse nicht konfiguriert &lt;nobody@nowhere&gt;</adminAddress>
+  <adminAddress>Jenkins &lt;jenkins@jenkins.torproject.org&gt;</adminAddress>
   <smtpHost>localhost</smtpHost>
   <useSsl>false</useSsl>
   <charset>UTF-8</charset>

@@ -55,7 +55,7 @@
             <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
               <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
               <name>Default</name>
-              <home>C:\Program Files (x86)\Git\cmd</home>
+              <home>C:\Program Files (x86)\Git\cmd\git</home>
             </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
           </locations>
         </hudson.tools.ToolLocationNodeProperty>

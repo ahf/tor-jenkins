@@ -49,7 +49,17 @@
         <agentCommand>ssh -l jenkins -p 2222 localhost ~/bin/start-slave</agentCommand>
       </launcher>
       <label></label>
-      <nodeProperties/>
+      <nodeProperties>
+        <hudson.tools.ToolLocationNodeProperty>
+          <locations>
+            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
+              <name>Default</name>
+              <home>C:\Program Files (x86)\Git\cmd</home>
+            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          </locations>
+        </hudson.tools.ToolLocationNodeProperty>
+      </nodeProperties>
     </slave>
   </slaves>
   <quietPeriod>5</quietPeriod>

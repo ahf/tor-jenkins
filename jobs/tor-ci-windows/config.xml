@@ -1,73 +1,20 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<project>
+<?xml version="1.0" encoding="UTF-8"?><project>
   <actions/>
   <description>Do not edit this job through the web</description>
+  <keepDependencies>false</keepDependencies>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <concurrentBuild>false</concurrentBuild>
+  <assignedNode>windows</assignedNode>
+  <canRoam>false</canRoam>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
-  <keepDependencies>false</keepDependencies>
-  <properties>
-    <job-metadata>
-      <values class="linked-list">
-        <metadata-tree>
-          <name>job-info</name>
-          <parent class="job-metadata" reference="../../.."/>
-          <generated>true</generated>
-          <exposedToEnvironment>false</exposedToEnvironment>
-          <children class="linked-list">
-            <metadata-tree>
-              <name>last-saved</name>
-              <description></description>
-              <parent class="metadata-tree" reference="../../.."/>
-              <generated>true</generated>
-              <exposedToEnvironment>false</exposedToEnvironment>
-              <children class="linked-list">
-                <metadata-date>
-                  <name>time</name>
-                  <description></description>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <value>
-                    <time>1364311947147</time>
-                    <timezone>Etc/UTC</timezone>
-                  </value>
-                  <checked>false</checked>
-                </metadata-date>
-                <metadata-tree>
-                  <name>user</name>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <children class="linked-list">
-                    <metadata-string>
-                      <name>display-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>Jenkins Administrator</value>
-                    </metadata-string>
-                    <metadata-string>
-                      <name>full-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>Jenkins Administrator</value>
-                    </metadata-string>
-                  </children>
-                </metadata-tree>
-              </children>
-            </metadata-tree>
-          </children>
-        </metadata-tree>
-      </values>
-    </job-metadata>
-  </properties>
+  <properties/>
   <scm class="hudson.plugins.git.GitSCM">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
@@ -96,58 +43,50 @@
     <wipeOutWorkspace>true</wipeOutWorkspace>
     <pruneBranches>false</pruneBranches>
     <remotePoll>false</remotePoll>
-    <ignoreNotifyCommit>false</ignoreNotifyCommit>
-    <useShallowClone>false</useShallowClone>
     <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
     <gitTool>Default</gitTool>
     <submoduleCfg class="list"/>
-    <relativeTargetDir></relativeTargetDir>
-    <reference></reference>
-    <excludedRegions></excludedRegions>
-    <excludedUsers></excludedUsers>
-    <gitConfigName></gitConfigName>
-    <gitConfigEmail></gitConfigEmail>
+    <relativeTargetDir/>
+    <reference/>
+    <excludedRegions/>
+    <excludedUsers/>
+    <gitConfigName/>
+    <gitConfigEmail/>
     <skipTag>false</skipTag>
-    <scmName></scmName>
+    <scmName/>
   </scm>
-  <assignedNode>windows</assignedNode>
-  <canRoam>false</canRoam>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
       <spec>*/10 * * * *</spec>
     </hudson.triggers.SCMTrigger>
   </triggers>
-  <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>extern-windows-libevent</projectName>
-      <filter></filter>
-      <target></target>
+      <filter/>
+      <target/>
+      <flatten>false</flatten>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
-      <flatten>false</flatten>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>extern-windows-openssl</projectName>
-      <filter></filter>
-      <target></target>
+      <filter/>
+      <target/>
+      <flatten>false</flatten>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
-      <flatten>false</flatten>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>extern-windows-zlib</projectName>
-      <filter></filter>
-      <target></target>
+      <filter/>
+      <target/>
+      <flatten>false</flatten>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
-      <flatten>false</flatten>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>~/jenkins-tools/slaves/windows/build-wrapper</command>
@@ -155,7 +94,7 @@
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>RESULT-tor.tar.gz</artifacts>
+      <artifacts>RESULT.tor.tar.gz</artifacts>
       <latestOnly>false</latestOnly>
     </hudson.tasks.ArtifactArchiver>
   </publishers>

@@ -71,7 +71,7 @@
       <name>weissii.torproject.org</name>
       <description>Windows 7 build VM</description>
       <remoteFS>/cygwin/home/jenkins</remoteFS>
-      <numExecutors>1</numExecutors>
+      <numExecutors>2</numExecutors>
       <mode>NORMAL</mode>
       <retentionStrategy class="hudson.slaves.RetentionStrategy$Demand">
         <inDemandDelay>1</inDemandDelay>

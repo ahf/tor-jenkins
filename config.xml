@@ -9,7 +9,9 @@
   <numExecutors>0</numExecutors>
   <mode>EXCLUSIVE</mode>
   <useSecurity>true</useSecurity>
-  <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy"/>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Hudson.Administer:Jenkins Administrator</permission>
+  </authorizationStrategy>
   <securityRealm class="hudson.security.LDAPSecurityRealm">
     <server>ldaps://db.torproject.org</server>
     <rootDN>dc=torproject,dc=org</rootDN>

@@ -12,14 +12,15 @@
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Configure:Jenkins Administrator</permission>
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Read:Jenkins Administrator</permission>
-    <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Read:anonymous</permission>
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Replace:Jenkins Administrator</permission>
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Update:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Configure:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Connect:Jenkins Administrator</permission>
+    <permission>hudson.model.Computer.Connect:authenticated</permission>
     <permission>hudson.model.Computer.Create:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Delete:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Disconnect:Jenkins Administrator</permission>
+    <permission>hudson.model.Computer.Disconnect:authenticated</permission>
     <permission>hudson.model.Hudson.Administer:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.ConfigureUpdateCenter:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.Read:Jenkins Administrator</permission>
@@ -27,7 +28,9 @@
     <permission>hudson.model.Hudson.RunScripts:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.UploadPlugins:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Build:Jenkins Administrator</permission>
+    <permission>hudson.model.Item.Build:authenticated</permission>
     <permission>hudson.model.Item.Cancel:Jenkins Administrator</permission>
+    <permission>hudson.model.Item.Cancel:authenticated</permission>
     <permission>hudson.model.Item.Configure:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Create:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Delete:Jenkins Administrator</permission>
@@ -35,7 +38,9 @@
     <permission>hudson.model.Item.Read:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.Item.Workspace:Jenkins Administrator</permission>
+    <permission>hudson.model.Item.Workspace:authenticated</permission>
     <permission>hudson.model.Run.Delete:Jenkins Administrator</permission>
+    <permission>hudson.model.Run.Delete:authenticated</permission>
     <permission>hudson.model.Run.Update:Jenkins Administrator</permission>
     <permission>hudson.model.View.Configure:Jenkins Administrator</permission>
     <permission>hudson.model.View.Create:Jenkins Administrator</permission>

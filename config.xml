@@ -10,37 +10,66 @@
   <mode>EXCLUSIVE</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Configure:Jenkins Administrator</permission>
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Configure:weasel</permission>
+    <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Read:Jenkins Administrator</permission>
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Read:anonymous</permission>
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Read:weasel</permission>
+    <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Replace:Jenkins Administrator</permission>
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Replace:weasel</permission>
+    <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Update:Jenkins Administrator</permission>
     <permission>com.sonyericsson.hudson.plugins.metadata.model.PluginImpl.Update:weasel</permission>
+    <permission>hudson.model.Computer.Configure:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Configure:weasel</permission>
+    <permission>hudson.model.Computer.Connect:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Connect:weasel</permission>
+    <permission>hudson.model.Computer.Create:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Create:weasel</permission>
+    <permission>hudson.model.Computer.Delete:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Delete:weasel</permission>
+    <permission>hudson.model.Computer.Disconnect:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Disconnect:weasel</permission>
+    <permission>hudson.model.Hudson.Administer:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.Administer:weasel</permission>
+    <permission>hudson.model.Hudson.ConfigureUpdateCenter:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.ConfigureUpdateCenter:weasel</permission>
+    <permission>hudson.model.Hudson.Read:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Hudson.Read:weasel</permission>
+    <permission>hudson.model.Hudson.RunScripts:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.RunScripts:weasel</permission>
+    <permission>hudson.model.Hudson.UploadPlugins:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.UploadPlugins:weasel</permission>
+    <permission>hudson.model.Item.Build:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Build:weasel</permission>
+    <permission>hudson.model.Item.Cancel:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Cancel:weasel</permission>
+    <permission>hudson.model.Item.Configure:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Configure:weasel</permission>
+    <permission>hudson.model.Item.Create:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Create:weasel</permission>
+    <permission>hudson.model.Item.Delete:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Delete:weasel</permission>
+    <permission>hudson.model.Item.Discover:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Discover:weasel</permission>
+    <permission>hudson.model.Item.Read:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:weasel</permission>
+    <permission>hudson.model.Item.Workspace:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Workspace:weasel</permission>
+    <permission>hudson.model.Run.Delete:Jenkins Administrator</permission>
     <permission>hudson.model.Run.Delete:weasel</permission>
+    <permission>hudson.model.Run.Update:Jenkins Administrator</permission>
     <permission>hudson.model.Run.Update:weasel</permission>
+    <permission>hudson.model.View.Configure:Jenkins Administrator</permission>
     <permission>hudson.model.View.Configure:weasel</permission>
+    <permission>hudson.model.View.Create:Jenkins Administrator</permission>
     <permission>hudson.model.View.Create:weasel</permission>
+    <permission>hudson.model.View.Delete:Jenkins Administrator</permission>
     <permission>hudson.model.View.Delete:weasel</permission>
+    <permission>hudson.model.View.Read:Jenkins Administrator</permission>
     <permission>hudson.model.View.Read:weasel</permission>
+    <permission>hudson.scm.SCM.Tag:Jenkins Administrator</permission>
     <permission>hudson.scm.SCM.Tag:weasel</permission>
   </authorizationStrategy>
   <securityRealm class="hudson.security.LDAPSecurityRealm">

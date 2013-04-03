@@ -14,8 +14,8 @@
     <server>ldaps://db.torproject.org</server>
     <rootDN>dc=torproject,dc=org</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>
-    <userSearchBase>ou=users,dc=torproject,dc=org</userSearchBase>
-    <userSearch>objectClass=debianDeveloper</userSearch>
+    <userSearchBase></userSearchBase>
+    <userSearch>uid={0}</userSearch>
     <disableMailAddressResolver>false</disableMailAddressResolver>
   </securityRealm>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>

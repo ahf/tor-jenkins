@@ -6,7 +6,7 @@
     <string>OldData</string>
   </disabledAdministrativeMonitors>
   <version>1.480.3</version>
-  <numExecutors>0</numExecutors>
+  <numExecutors>1</numExecutors>
   <mode>EXCLUSIVE</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">

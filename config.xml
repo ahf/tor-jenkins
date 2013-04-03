@@ -21,6 +21,7 @@
     <permission>hudson.model.Computer.Disconnect:weasel</permission>
     <permission>hudson.model.Hudson.Administer:weasel</permission>
     <permission>hudson.model.Hudson.ConfigureUpdateCenter:weasel</permission>
+    <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Hudson.Read:weasel</permission>
     <permission>hudson.model.Hudson.RunScripts:weasel</permission>
     <permission>hudson.model.Hudson.UploadPlugins:weasel</permission>

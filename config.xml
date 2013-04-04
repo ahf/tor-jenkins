@@ -22,6 +22,7 @@
     <permission>hudson.model.Computer.Disconnect:Jenkins Administrator</permission>
     <permission>hudson.model.Computer.Disconnect:authenticated</permission>
     <permission>hudson.model.Hudson.Administer:Jenkins Administrator</permission>
+    <permission>hudson.model.Hudson.Administer:jenkins</permission>
     <permission>hudson.model.Hudson.ConfigureUpdateCenter:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.Read:Jenkins Administrator</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>

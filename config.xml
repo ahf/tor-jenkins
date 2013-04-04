@@ -123,7 +123,7 @@
       <launcher class="hudson.slaves.CommandLauncher">
         <agentCommand>ssh -l jenkins weissii.torproject.org ~/bin/start-slave</agentCommand>
       </launcher>
-      <label></label>
+      <label>6.1 amd64 amd64-windows amd64-windows-6.1 windows windows-6.1</label>
       <nodeProperties>
         <hudson.tools.ToolLocationNodeProperty>
           <locations>

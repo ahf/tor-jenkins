@@ -1,76 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?><project>
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
   <actions/>
   <description>Do not edit this job through the web</description>
-  <keepDependencies>false</keepDependencies>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <concurrentBuild>false</concurrentBuild>
-  <assignedNode>windows</assignedNode>
-  <canRoam>false</canRoam>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
-  <properties/>
-  <scm class="org.jenkinsci.plugins.multiplescms.MultiSCM">
-    <scms>
-      <scm class="hudson.plugins.git.GitSCM">
-        <configVersion>2</configVersion>
-        <userRemoteConfigs>
-          <hudson.plugins.git.UserRemoteConfig>
-            <name>origin</name>
-            <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
-            <url>https://git.torproject.org/extern/qt.git</url>
-          </hudson.plugins.git.UserRemoteConfig>
-        </userRemoteConfigs>
-        <branches>
-          <hudson.plugins.git.BranchSpec>
-            <name>master</name>
-          </hudson.plugins.git.BranchSpec>
-        </branches>
-        <disableSubmodules>false</disableSubmodules>
-        <recursiveSubmodules>false</recursiveSubmodules>
-        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-        <authorOrCommitter>false</authorOrCommitter>
-        <clean>false</clean>
-        <wipeOutWorkspace>true</wipeOutWorkspace>
-        <pruneBranches>false</pruneBranches>
-        <remotePoll>false</remotePoll>
-        <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
-        <gitTool>Default</gitTool>
-        <submoduleCfg class="list"/>
-        <relativeTargetDir/>
-        <reference/>
-        <excludedRegions/>
-        <excludedUsers/>
-        <gitConfigName/>
-        <gitConfigEmail/>
-        <skipTag>false</skipTag>
-        <scmName/>
-      </scm>
-    </scms>
-  </scm>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <job-metadata>
+      <values class="linked-list"/>
+    </job-metadata>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>windows</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>extern-windows-openssl</projectName>
-      <filter/>
-      <target/>
-      <flatten>false</flatten>
+      <filter></filter>
+      <target></target>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
+      <flatten>false</flatten>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>extern-windows-zlib</projectName>
-      <filter/>
-      <target/>
-      <flatten>false</flatten>
+      <filter></filter>
+      <target></target>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
+      <flatten>false</flatten>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>~/jenkins-tools/slaves/windows/build-wrapper</command>
@@ -95,6 +64,9 @@
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
       <timeoutMinutes>600</timeoutMinutes>
       <failBuild>true</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
 </project>

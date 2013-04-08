@@ -30,7 +30,7 @@
     <permission>hudson.model.Hudson.UploadPlugins:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Build:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Build:authenticated</permission>
-    <permission>hudson.model.Item.Build:job-trigger</permission>
+    <permission>hudson.model.Item.Build:git</permission>
     <permission>hudson.model.Item.Cancel:Jenkins Administrator</permission>
     <permission>hudson.model.Item.Cancel:authenticated</permission>
     <permission>hudson.model.Item.Configure:Jenkins Administrator</permission>

@@ -9,7 +9,11 @@
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <job-metadata>
+      <values class="linked-list"/>
+    </job-metadata>
+  </properties>
   <scm class="org.jenkinsci.plugins.multiplescms.MultiSCM">
     <scms>
       <hudson.plugins.git.GitSCM>
@@ -94,6 +98,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>

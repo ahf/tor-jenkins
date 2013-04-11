@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1365691219772</time>
+                    <time>1365718408850</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -108,7 +108,6 @@
     <gitConfigName></gitConfigName>
     <gitConfigEmail></gitConfigEmail>
     <skipTag>false</skipTag>
-    <includedRegions></includedRegions>
     <scmName></scmName>
   </scm>
   <assignedNode>master</assignedNode>
@@ -134,7 +133,7 @@
       </values>
     </hudson.matrix.LabelExpAxis>
   </axes>
-  <combinationFilter>(ARCHITECTURE==&quot;amd64&quot; || SUITE==&quot;experimental&quot;)</combinationFilter>
+  <combinationFilter></combinationFilter>
   <builders>
     <hudson.tasks.Shell>
       <command>/home/jenkins/jenkins-tools/slaves/linux/build-wrapper</command>
@@ -142,15 +141,14 @@
   </builders>
   <publishers/>
   <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper/>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
       <timeoutMinutes>600</timeoutMinutes>
       <failBuild>true</failBuild>
       <writingDescription>false</writingDescription>
       <timeoutPercentage>0</timeoutPercentage>
       <timeoutType>absolute</timeoutType>
-      <timeoutMinutesElasticDefault>3</timeoutMinutesElasticDefault>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper/>
     <matrixtieparent.BuildWrapperMtp>
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
@@ -163,6 +161,5 @@
       <ordinal>0</ordinal>
       <color>BLUE</color>
     </touchStoneResultCondition>
-    <sorter class="hudson.matrix.NoopMatrixConfigurationSorter"/>
   </executionStrategy>
 </matrix-project>

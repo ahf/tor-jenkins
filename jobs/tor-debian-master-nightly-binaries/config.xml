@@ -1,14 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><matrix-project>
-  <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
-    <runSequentially>true</runSequentially>
-    <touchStoneCombinationFilter>(ARCHITECTURE=="amd64" &amp;&amp; SUITE=="wheezy")</touchStoneCombinationFilter>
-    <touchStoneResultCondition>
-      <name>STABLE</name>
-      <ordinal>0</ordinal>
-      <color>BLUE</color>
-    </touchStoneResultCondition>
-  </executionStrategy>
-  <combinationFilter/>
+<?xml version='1.0' encoding='UTF-8'?>
+<matrix-project>
+  <actions/>
+  <description>Do not edit this job through the web</description>
+  <logRotator>
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>5</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <job-metadata>
+      <values class="linked-list"/>
+    </job-metadata>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>Linux</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
   <axes>
     <hudson.matrix.LabelExpAxis>
       <name>ARCHITECTURE</name>
@@ -31,31 +44,16 @@
       </values>
     </hudson.matrix.LabelExpAxis>
   </axes>
-  <actions/>
-  <description>Do not edit this job through the web</description>
-  <keepDependencies>false</keepDependencies>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <concurrentBuild>false</concurrentBuild>
-  <assignedNode>Linux</assignedNode>
-  <canRoam>false</canRoam>
-  <logRotator>
-    <daysToKeep>-1</daysToKeep>
-    <numToKeep>5</numToKeep>
-    <artifactDaysToKeep>-1</artifactDaysToKeep>
-    <artifactNumToKeep>-1</artifactNumToKeep>
-  </logRotator>
-  <properties/>
+  <combinationFilter></combinationFilter>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>tor-debian-master-nightly-source</projectName>
-      <filter/>
+      <filter></filter>
       <target>incoming</target>
-      <flatten>true</flatten>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
+      <flatten>true</flatten>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>/home/jenkins/jenkins-tools/slaves/linux/tor-debian-master-nightly-binaries</command>
@@ -68,7 +66,7 @@
     </hudson.tasks.ArtifactArchiver>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.10">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup>
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -84,6 +82,18 @@
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
       <timeoutMinutes>600</timeoutMinutes>
       <failBuild>true</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
+  <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
+    <runSequentially>true</runSequentially>
+    <touchStoneCombinationFilter>(ARCHITECTURE==&quot;amd64&quot; &amp;&amp; SUITE==&quot;wheezy&quot;)</touchStoneCombinationFilter>
+    <touchStoneResultCondition>
+      <name>SUCCESS</name>
+      <ordinal>0</ordinal>
+      <color>BLUE</color>
+    </touchStoneResultCondition>
+  </executionStrategy>
 </matrix-project>

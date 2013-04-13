@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><project>
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
   <actions/>
   <description>Do not edit this job through the web</description>
-  <keepDependencies>false</keepDependencies>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <concurrentBuild>false</concurrentBuild>
-  <assignedNode>wheezy</assignedNode>
-  <canRoam>false</canRoam>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
-  <properties/>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <job-metadata>
+      <values class="linked-list"/>
+    </job-metadata>
+  </properties>
   <scm class="org.jenkinsci.plugins.multiplescms.MultiSCM">
     <scms>
-      <scm class="hudson.plugins.git.GitSCM">
+      <hudson.plugins.git.GitSCM>
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
@@ -39,19 +38,21 @@
         <wipeOutWorkspace>true</wipeOutWorkspace>
         <pruneBranches>false</pruneBranches>
         <remotePoll>false</remotePoll>
+        <ignoreNotifyCommit>false</ignoreNotifyCommit>
+        <useShallowClone>false</useShallowClone>
         <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
         <gitTool>Default</gitTool>
         <submoduleCfg class="list"/>
         <relativeTargetDir>tor</relativeTargetDir>
-        <reference/>
-        <excludedRegions/>
-        <excludedUsers/>
-        <gitConfigName/>
-        <gitConfigEmail/>
+        <reference></reference>
+        <excludedRegions></excludedRegions>
+        <excludedUsers></excludedUsers>
+        <gitConfigName></gitConfigName>
+        <gitConfigEmail></gitConfigEmail>
         <skipTag>false</skipTag>
-        <scmName/>
-      </scm>
-      <scm class="hudson.plugins.git.GitSCM">
+        <scmName></scmName>
+      </hudson.plugins.git.GitSCM>
+      <hudson.plugins.git.GitSCM>
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
@@ -73,20 +74,29 @@
         <wipeOutWorkspace>true</wipeOutWorkspace>
         <pruneBranches>false</pruneBranches>
         <remotePoll>false</remotePoll>
+        <ignoreNotifyCommit>false</ignoreNotifyCommit>
+        <useShallowClone>false</useShallowClone>
         <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
         <gitTool>Default</gitTool>
         <submoduleCfg class="list"/>
         <relativeTargetDir>debian-tor</relativeTargetDir>
-        <reference/>
-        <excludedRegions/>
-        <excludedUsers/>
-        <gitConfigName/>
-        <gitConfigEmail/>
+        <reference></reference>
+        <excludedRegions></excludedRegions>
+        <excludedUsers></excludedUsers>
+        <gitConfigName></gitConfigName>
+        <gitConfigEmail></gitConfigEmail>
         <skipTag>false</skipTag>
-        <scmName/>
-      </scm>
+        <scmName></scmName>
+      </hudson.plugins.git.GitSCM>
     </scms>
   </scm>
+  <assignedNode>wheezy</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>SUITE=wheezy ARCHITECTURE=amd64 /home/jenkins/jenkins-tools/slaves/linux/build-wrapper</command>
@@ -107,7 +117,7 @@
     </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.10">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup>
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -120,6 +130,9 @@
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
       <timeoutMinutes>600</timeoutMinutes>
       <failBuild>true</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
     <matrixtieparent.BuildWrapperMtp>
       <labelName>master</labelName>

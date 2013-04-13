@@ -1,52 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><matrix-project>
-  <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
-    <runSequentially>true</runSequentially>
-    <touchStoneCombinationFilter>(ARCHITECTURE=="amd64" &amp;&amp; SUITE=="wheezy")</touchStoneCombinationFilter>
-    <touchStoneResultCondition>
-      <name>STABLE</name>
-      <ordinal>0</ordinal>
-      <color>BLUE</color>
-    </touchStoneResultCondition>
-  </executionStrategy>
-  <combinationFilter/>
-  <axes>
-    <hudson.matrix.LabelExpAxis>
-      <name>ARCHITECTURE</name>
-      <values>
-        <string>amd64</string>
-        <string>i386</string>
-      </values>
-    </hudson.matrix.LabelExpAxis>
-    <hudson.matrix.LabelExpAxis>
-      <name>SUITE</name>
-      <values>
-        <string>squeeze</string>
-        <string>wheezy</string>
-        <string>lucid</string>
-        <string>natty</string>
-        <string>oneiric</string>
-        <string>precise</string>
-        <string>quantal</string>
-        <string>sid</string>
-      </values>
-    </hudson.matrix.LabelExpAxis>
-  </axes>
+<?xml version='1.0' encoding='UTF-8'?>
+<matrix-project>
   <actions/>
   <description>Do not edit this job through the web</description>
-  <keepDependencies>false</keepDependencies>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <concurrentBuild>false</concurrentBuild>
-  <assignedNode>Linux</assignedNode>
-  <canRoam>false</canRoam>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
-  <properties/>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <job-metadata>
+      <values class="linked-list"/>
+    </job-metadata>
+  </properties>
   <scm class="hudson.plugins.git.GitSCM">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
@@ -69,18 +36,50 @@
     <wipeOutWorkspace>true</wipeOutWorkspace>
     <pruneBranches>false</pruneBranches>
     <remotePoll>false</remotePoll>
+    <ignoreNotifyCommit>false</ignoreNotifyCommit>
+    <useShallowClone>false</useShallowClone>
     <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
     <gitTool>Default</gitTool>
     <submoduleCfg class="list"/>
-    <relativeTargetDir/>
-    <reference/>
-    <excludedRegions/>
-    <excludedUsers/>
-    <gitConfigName/>
-    <gitConfigEmail/>
+    <relativeTargetDir></relativeTargetDir>
+    <reference></reference>
+    <excludedRegions></excludedRegions>
+    <excludedUsers></excludedUsers>
+    <gitConfigName></gitConfigName>
+    <gitConfigEmail></gitConfigEmail>
     <skipTag>false</skipTag>
-    <scmName/>
+    <scmName></scmName>
   </scm>
+  <assignedNode>Linux</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <axes>
+    <hudson.matrix.LabelExpAxis>
+      <name>ARCHITECTURE</name>
+      <values>
+        <string>amd64</string>
+        <string>i386</string>
+      </values>
+    </hudson.matrix.LabelExpAxis>
+    <hudson.matrix.LabelExpAxis>
+      <name>SUITE</name>
+      <values>
+        <string>squeeze</string>
+        <string>wheezy</string>
+        <string>lucid</string>
+        <string>natty</string>
+        <string>oneiric</string>
+        <string>precise</string>
+        <string>quantal</string>
+        <string>sid</string>
+      </values>
+    </hudson.matrix.LabelExpAxis>
+  </axes>
+  <combinationFilter></combinationFilter>
   <builders>
     <hudson.tasks.Shell>
       <command>/home/jenkins/jenkins-tools/slaves/linux/build-wrapper</command>
@@ -88,7 +87,7 @@
   </builders>
   <publishers/>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.10">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup>
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -101,9 +100,21 @@
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
       <timeoutMinutes>600</timeoutMinutes>
       <failBuild>true</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
     <matrixtieparent.BuildWrapperMtp>
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>
+  <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
+    <runSequentially>true</runSequentially>
+    <touchStoneCombinationFilter>(ARCHITECTURE==&quot;amd64&quot; &amp;&amp; SUITE==&quot;wheezy&quot;)</touchStoneCombinationFilter>
+    <touchStoneResultCondition>
+      <name>SUCCESS</name>
+      <ordinal>0</ordinal>
+      <color>BLUE</color>
+    </touchStoneResultCondition>
+  </executionStrategy>
 </matrix-project>

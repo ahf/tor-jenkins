@@ -1,32 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?><project>
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
   <actions/>
   <description>Do not edit this job through the web</description>
-  <keepDependencies>false</keepDependencies>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <concurrentBuild>false</concurrentBuild>
-  <assignedNode>master</assignedNode>
-  <canRoam>false</canRoam>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
-  <properties/>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <job-metadata>
+      <values class="linked-list"/>
+    </job-metadata>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>master</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>true</command>
     </hudson.tasks.Shell>
     <hudson.plugins.copyartifact.CopyArtifact>
       <projectName>tor-debian-024-nightly-binaries</projectName>
-      <filter/>
+      <filter></filter>
       <target>incoming</target>
-      <flatten>true</flatten>
       <selector class="hudson.plugins.copyartifact.TriggeredBuildSelector">
         <fallbackToLastSuccessful>false</fallbackToLastSuccessful>
       </selector>
+      <flatten>true</flatten>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>rsync -v incoming/*/* tordeb@palmeri.torproject.org:-overridden-server-side- &amp;&amp; ssh tordeb@palmeri.torproject.org dinstall</command>
@@ -34,7 +41,7 @@
   </builders>
   <publishers/>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.10">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup>
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -47,6 +54,9 @@
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
       <timeoutMinutes>600</timeoutMinutes>
       <failBuild>true</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
     <matrixtieparent.BuildWrapperMtp>
       <labelName>master</labelName>

@@ -13,6 +13,9 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions/>
     </hudson.model.ParametersDefinitionProperty>
+    <job-metadata>
+      <values class="linked-list"/>
+    </job-metadata>
   </properties>
   <scm class="org.jenkinsci.plugins.multiplescms.MultiSCM">
     <scms>
@@ -95,6 +98,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>

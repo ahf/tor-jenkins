@@ -9,12 +9,18 @@
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <job-metadata>
+      <values class="linked-list"/>
+    </job-metadata>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
   <assignedNode>master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>

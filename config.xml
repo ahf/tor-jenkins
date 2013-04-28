@@ -82,7 +82,7 @@
       <launcher class="hudson.slaves.CommandLauncher">
         <agentCommand>ssh jenkins@dixie.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>
       </launcher>
-      <label>Linux Debian amd64 i386 squeeze wheezy lucid natty oneiric precise quantal sid experimental</label>
+      <label>Linux Debian amd64 i386 squeeze wheezy lucid natty oneiric precise quantal sid experimental raring</label>
       <nodeProperties/>
     </slave>
     <slave>

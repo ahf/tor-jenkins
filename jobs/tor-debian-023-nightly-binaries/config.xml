@@ -2,7 +2,7 @@
 <matrix-project>
   <actions/>
   <description>Do not edit this job through the web</description>
-  <logRotator>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -10,7 +10,7 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <job-metadata>
+    <job-metadata plugin="metadata@1.0b">
       <values class="linked-list">
         <metadata-tree>
           <name>job-info</name>
@@ -69,7 +69,7 @@
     </job-metadata>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
-  <assignedNode>Linux</assignedNode>
+  <assignedNode>master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -101,7 +101,7 @@
   </axes>
   <combinationFilter></combinationFilter>
   <builders>
-    <hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.25">
       <projectName>tor-debian-023-nightly-source</projectName>
       <filter></filter>
       <target>incoming</target>
@@ -118,6 +118,7 @@
     <hudson.tasks.ArtifactArchiver>
       <artifacts>RESULT/*</artifacts>
       <latestOnly>false</latestOnly>
+      <allowEmptyArchive>false</allowEmptyArchive>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>tor-debian-023-nightly-install</childProjects>
@@ -129,7 +130,7 @@
     </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.12">
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -138,15 +139,15 @@
       </patterns>
       <deleteDirs>false</deleteDirs>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper/>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.4"/>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.11">
       <timeoutMinutes>600</timeoutMinutes>
       <failBuild>true</failBuild>
       <writingDescription>false</writingDescription>
       <timeoutPercentage>0</timeoutPercentage>
       <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <matrixtieparent.BuildWrapperMtp>
+    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.1">
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>

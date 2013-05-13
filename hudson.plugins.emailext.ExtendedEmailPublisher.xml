@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>
-  <helpRedirect/>
+<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.27.1">
   <hudsonUrl>http://jenkins.torproject.org/</hudsonUrl>
   <adminAddress>address not configured yet &lt;nobody&gt;</adminAddress>
   <useSsl>false</useSsl>

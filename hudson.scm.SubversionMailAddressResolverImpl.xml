@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.scm.SubversionMailAddressResolverImpl_-DescriptorImpl>
-  <helpRedirect/>
+<hudson.scm.SubversionMailAddressResolverImpl_-DescriptorImpl plugin="subversion@1.44">
   <rules>
     <hudson.scm.SubversionMailAddressResolverImpl_-Rule>
       <pattern>https://[^.]+.dev.java.net/svn/([^/]+)(/.*)?</pattern>

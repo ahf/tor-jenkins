@@ -1,5 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.timestamper.TimestamperConfig>
-  <helpRedirect/>
+<hudson.plugins.timestamper.TimestamperConfig plugin="timestamper@1.4">
   <timestampFormat>&apos;&lt;b&gt;&apos;HH:mm:ss&apos;&lt;/b&gt; &apos;</timestampFormat>
 </hudson.plugins.timestamper.TimestamperConfig>

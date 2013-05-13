@@ -50,7 +50,7 @@
     <permission>hudson.model.View.Read:Jenkins Administrator</permission>
     <permission>hudson.scm.SCM.Tag:Jenkins Administrator</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.LDAPSecurityRealm">
+  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.2">
     <server>ldaps://db.torproject.org</server>
     <rootDN>dc=torproject,dc=org</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>

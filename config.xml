@@ -169,6 +169,7 @@
         <org.jenkins.plugins.builton.BuiltOnColumn plugin="built-on-column@1.1"/>
         <hudson.plugins.nodenamecolumn.NodeNameColumn plugin="nodenamecolumn@1.1"/>
       </columns>
+      <includeRegex>tor-.*</includeRegex>
     </listView>
   </views>
   <primaryView>All</primaryView>

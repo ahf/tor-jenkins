@@ -203,7 +203,16 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
       </jobNames>
-      <jobFilters/>
+      <jobFilters>
+        <hudson.views.JobStatusFilter plugin="view-job-filters@1.22">
+          <includeExcludeTypeString>includeMatched</includeExcludeTypeString>
+          <unstable>false</unstable>
+          <failed>true</failed>
+          <aborted>false</aborted>
+          <disabled>false</disabled>
+          <stable>false</stable>
+        </hudson.views.JobStatusFilter>
+      </jobFilters>
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
@@ -215,6 +224,7 @@
         <org.jenkins.plugins.builton.BuiltOnColumn plugin="built-on-column@1.1"/>
         <hudson.plugins.nodenamecolumn.NodeNameColumn plugin="nodenamecolumn@1.1"/>
       </columns>
+      <includeRegex>.*</includeRegex>
     </listView>
   </views>
   <primaryView>All</primaryView>

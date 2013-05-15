@@ -173,7 +173,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>packages - debian</name>
+      <name>debian packages</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>

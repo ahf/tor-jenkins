@@ -69,7 +69,7 @@
     </job-metadata>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
-  <assignedNode>Linux</assignedNode>
+  <assignedNode>master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>

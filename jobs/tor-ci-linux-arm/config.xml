@@ -108,7 +108,7 @@
     <scmName></scmName>
   </scm>
   <quietPeriod>900</quietPeriod>
-  <assignedNode>Linux</assignedNode>
+  <assignedNode>master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>

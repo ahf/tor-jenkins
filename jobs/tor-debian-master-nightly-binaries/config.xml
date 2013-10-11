@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1381418626431</time>
+                    <time>1381419565818</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -74,7 +74,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector"/>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <axes>
     <hudson.matrix.LabelExpAxis>
@@ -126,6 +126,7 @@
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
         <color>BLUE</color>
+        <completeBuild>true</completeBuild>
       </threshold>
     </hudson.tasks.BuildTrigger>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.27.1">
@@ -293,6 +294,7 @@ url: $BUILD_URL
       <name>SUCCESS</name>
       <ordinal>0</ordinal>
       <color>BLUE</color>
+      <completeBuild>true</completeBuild>
     </touchStoneResultCondition>
   </executionStrategy>
 </matrix-project>

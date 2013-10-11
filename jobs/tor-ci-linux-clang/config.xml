@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1381418729659</time>
+                    <time>1381418869416</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -115,7 +115,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector"/>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <axes>
     <hudson.matrix.LabelExpAxis>
@@ -304,6 +304,7 @@ url: $BUILD_URL
       <name>SUCCESS</name>
       <ordinal>0</ordinal>
       <color>BLUE</color>
+      <completeBuild>true</completeBuild>
     </touchStoneResultCondition>
   </executionStrategy>
 </matrix-project>

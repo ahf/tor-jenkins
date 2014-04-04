@@ -104,12 +104,12 @@
     <skipTag>false</skipTag>
     <scmName></scmName>
   </scm>
-  <assignedNode>Linux</assignedNode>
+  <assignedNode>master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector"/>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <axes>
     <hudson.matrix.LabelExpAxis>
@@ -306,6 +306,7 @@ url: $BUILD_URL
       <name>SUCCESS</name>
       <ordinal>0</ordinal>
       <color>BLUE</color>
+      <completeBuild>true</completeBuild>
     </touchStoneResultCondition>
   </executionStrategy>
 </matrix-project>

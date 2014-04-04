@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <matrix-config>
+  <actions/>
   <keepDependencies>false</keepDependencies>
   <properties>
     <job-metadata plugin="metadata@1.0b">
@@ -114,6 +115,6 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector"/>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
 </matrix-config>

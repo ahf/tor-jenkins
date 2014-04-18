@@ -58,6 +58,7 @@
     <userSearch>uid={0}</userSearch>
     <disableMailAddressResolver>false</disableMailAddressResolver>
   </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
@@ -82,7 +83,7 @@
       <launcher class="hudson.slaves.CommandLauncher">
         <agentCommand>ssh jenkins@dixie.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>
       </launcher>
-      <label>Linux Debian amd64 i386 squeeze wheezy lucid natty oneiric precise quantal sid experimental raring jessie saucy</label>
+      <label>Linux Debian amd64 i386 squeeze wheezy lucid natty oneiric precise quantal sid experimental raring jessie saucy trusty</label>
       <nodeProperties/>
     </slave>
     <slave>
@@ -187,6 +188,7 @@
         <hudson.plugins.nodenamecolumn.NodeNameColumn plugin="nodenamecolumn@1.1"/>
       </columns>
       <includeRegex>tor-.*</includeRegex>
+      <recurse>false</recurse>
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
@@ -210,6 +212,7 @@
         <hudson.plugins.nodenamecolumn.NodeNameColumn plugin="nodenamecolumn@1.1"/>
       </columns>
       <includeRegex>.*-debian-.*</includeRegex>
+      <recurse>false</recurse>
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
@@ -241,6 +244,7 @@
         <org.jenkins.plugins.builton.BuiltOnColumn plugin="built-on-column@1.1"/>
         <hudson.plugins.nodenamecolumn.NodeNameColumn plugin="nodenamecolumn@1.1"/>
       </columns>
+      <recurse>false</recurse>
     </listView>
   </views>
   <primaryView>All</primaryView>

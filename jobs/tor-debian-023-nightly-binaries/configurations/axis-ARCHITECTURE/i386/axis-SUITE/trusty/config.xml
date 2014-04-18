@@ -24,7 +24,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1397851647733</time>
+                    <time>1397851570642</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -41,7 +41,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>unknown</value>
+                      <value>jenkins</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -49,7 +49,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>unknown</value>
+                      <value>jenkins</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>

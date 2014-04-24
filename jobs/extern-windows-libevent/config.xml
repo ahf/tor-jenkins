@@ -1,74 +1,21 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<project>
+<?xml version="1.0" encoding="UTF-8"?><project>
   <actions/>
   <description>Do not edit this job through the web</description>
-  <logRotator class="hudson.tasks.LogRotator">
+  <keepDependencies>false</keepDependencies>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <concurrentBuild>false</concurrentBuild>
+  <assignedNode>windows</assignedNode>
+  <canRoam>false</canRoam>
+  <logRotator>
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
-  <keepDependencies>false</keepDependencies>
-  <properties>
-    <job-metadata plugin="metadata@1.0b">
-      <values class="linked-list">
-        <metadata-tree>
-          <name>job-info</name>
-          <parent class="job-metadata" reference="../../.."/>
-          <generated>true</generated>
-          <exposedToEnvironment>false</exposedToEnvironment>
-          <children class="linked-list">
-            <metadata-tree>
-              <name>last-saved</name>
-              <description></description>
-              <parent class="metadata-tree" reference="../../.."/>
-              <generated>true</generated>
-              <exposedToEnvironment>false</exposedToEnvironment>
-              <children class="linked-list">
-                <metadata-date>
-                  <name>time</name>
-                  <description></description>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <value>
-                    <time>1373891165456</time>
-                    <timezone>Etc/UTC</timezone>
-                  </value>
-                  <checked>false</checked>
-                </metadata-date>
-                <metadata-tree>
-                  <name>user</name>
-                  <parent class="metadata-tree" reference="../../.."/>
-                  <generated>true</generated>
-                  <exposedToEnvironment>false</exposedToEnvironment>
-                  <children class="linked-list">
-                    <metadata-string>
-                      <name>display-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
-                    </metadata-string>
-                    <metadata-string>
-                      <name>full-name</name>
-                      <description></description>
-                      <parent class="metadata-tree" reference="../../.."/>
-                      <generated>true</generated>
-                      <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
-                    </metadata-string>
-                  </children>
-                </metadata-tree>
-              </children>
-            </metadata-tree>
-          </children>
-        </metadata-tree>
-      </values>
-    </job-metadata>
-  </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@1.3.0">
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -90,27 +37,18 @@
     <wipeOutWorkspace>true</wipeOutWorkspace>
     <pruneBranches>false</pruneBranches>
     <remotePoll>false</remotePoll>
-    <ignoreNotifyCommit>false</ignoreNotifyCommit>
-    <useShallowClone>false</useShallowClone>
     <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
     <gitTool>Default</gitTool>
     <submoduleCfg class="list"/>
-    <relativeTargetDir></relativeTargetDir>
-    <reference></reference>
-    <excludedRegions></excludedRegions>
-    <excludedUsers></excludedUsers>
-    <gitConfigName></gitConfigName>
-    <gitConfigEmail></gitConfigEmail>
+    <relativeTargetDir/>
+    <reference/>
+    <excludedRegions/>
+    <excludedUsers/>
+    <gitConfigName/>
+    <gitConfigEmail/>
     <skipTag>false</skipTag>
-    <scmName></scmName>
+    <scmName/>
   </scm>
-  <assignedNode>windows</assignedNode>
-  <canRoam>false</canRoam>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector"/>
-  <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>~/jenkins-tools/slaves/windows/build-wrapper</command>
@@ -120,7 +58,6 @@
     <hudson.tasks.ArtifactArchiver>
       <artifacts>RESULT.libevent.tar.gz</artifacts>
       <latestOnly>false</latestOnly>
-      <allowEmptyArchive>false</allowEmptyArchive>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>tor-ci-windows</childProjects>
@@ -130,125 +67,106 @@
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.27.1">
+    <hudson.plugins.emailext.ExtendedEmailPublisher>
       <recipientList>tor-jenkins@commit.noreply.org</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
         </hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
         <hudson.plugins.emailext.plugins.trigger.FirstFailureTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
-          <failureCount>0</failureCount>
         </hudson.plugins.emailext.plugins.trigger.FirstFailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.NotBuiltTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
         </hudson.plugins.emailext.plugins.trigger.NotBuiltTrigger>
         <hudson.plugins.emailext.plugins.trigger.RegressionTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
         </hudson.plugins.emailext.plugins.trigger.RegressionTrigger>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.ImprovementTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
         </hudson.plugins.emailext.plugins.trigger.ImprovementTrigger>
         <hudson.plugins.emailext.plugins.trigger.StillFailingTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
         </hudson.plugins.emailext.plugins.trigger.StillFailingTrigger>
         <hudson.plugins.emailext.plugins.trigger.FixedTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedTrigger>
         <hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList/>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>false</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
           </email>
         </hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>
       </configuredTriggers>
@@ -259,15 +177,13 @@ build: $BUILD_NUMBER
 status: $BUILD_STATUS
 url: $BUILD_URL
 </defaultContent>
-      <attachmentsPattern></attachmentsPattern>
-      <presendScript></presendScript>
-      <attachBuildLog>false</attachBuildLog>
-      <compressBuildLog>false</compressBuildLog>
+      <attachmentsPattern/>
+      <presendScript/>
       <matrixTriggerMode>ONLY_PARENT</matrixTriggerMode>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.12">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.10">
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -276,15 +192,12 @@ url: $BUILD_URL
       </patterns>
       <deleteDirs>false</deleteDirs>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.4"/>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.11">
+    <hudson.plugins.timestamper.TimestamperBuildWrapper/>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper>
       <timeoutMinutes>600</timeoutMinutes>
       <failBuild>true</failBuild>
-      <writingDescription>false</writingDescription>
-      <timeoutPercentage>0</timeoutPercentage>
-      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.1">
+    <matrixtieparent.BuildWrapperMtp>
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>

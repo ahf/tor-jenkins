@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1398362168903</time>
+                    <time>1398362582843</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -166,6 +166,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
         <hudson.plugins.emailext.plugins.trigger.FirstFailureTrigger>
@@ -179,6 +180,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
           <failureCount>1</failureCount>
         </hudson.plugins.emailext.plugins.trigger.FirstFailureTrigger>
@@ -193,6 +195,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.NotBuiltTrigger>
         <hudson.plugins.emailext.plugins.trigger.RegressionTrigger>
@@ -206,6 +209,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.RegressionTrigger>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
@@ -219,6 +223,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.ImprovementTrigger>
@@ -232,6 +237,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.ImprovementTrigger>
         <hudson.plugins.emailext.plugins.trigger.StillFailingTrigger>
@@ -245,6 +251,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.StillFailingTrigger>
         <hudson.plugins.emailext.plugins.trigger.FixedTrigger>
@@ -258,6 +265,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedTrigger>
         <hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>
@@ -271,6 +279,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>
       </configuredTriggers>

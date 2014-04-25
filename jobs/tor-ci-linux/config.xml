@@ -10,7 +10,7 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <job-metadata plugin="metadata@1.1.0b">
+    <job-metadata plugin="metadata@1.0b">
       <values class="linked-list">
         <metadata-tree>
           <name>job-info</name>
@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1398363861704</time>
+                    <time>1397752638004</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -110,6 +110,7 @@
     <skipTag>false</skipTag>
     <scmName></scmName>
   </scm>
+  <assignedNode>master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -136,7 +137,6 @@
         <string>quantal</string>
         <string>raring</string>
         <string>saucy</string>
-        <string>trusty</string>
       </values>
     </hudson.matrix.LabelExpAxis>
   </axes>
@@ -152,7 +152,7 @@
       <latestOnly>false</latestOnly>
       <allowEmptyArchive>false</allowEmptyArchive>
     </hudson.tasks.ArtifactArchiver>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.37.2.2">
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.27.1">
       <recipientList>tor-jenkins@commit.noreply.org</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
@@ -166,7 +166,6 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
         <hudson.plugins.emailext.plugins.trigger.FirstFailureTrigger>
@@ -180,9 +179,8 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
-          <failureCount>1</failureCount>
+          <failureCount>0</failureCount>
         </hudson.plugins.emailext.plugins.trigger.FirstFailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.NotBuiltTrigger>
           <email>
@@ -195,7 +193,6 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.NotBuiltTrigger>
         <hudson.plugins.emailext.plugins.trigger.RegressionTrigger>
@@ -209,7 +206,6 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.RegressionTrigger>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
@@ -223,7 +219,6 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.ImprovementTrigger>
@@ -237,7 +232,6 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.ImprovementTrigger>
         <hudson.plugins.emailext.plugins.trigger.StillFailingTrigger>
@@ -251,7 +245,6 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.StillFailingTrigger>
         <hudson.plugins.emailext.plugins.trigger.FixedTrigger>
@@ -265,7 +258,6 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedTrigger>
         <hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>
@@ -279,7 +271,6 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
-            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>
       </configuredTriggers>
@@ -294,12 +285,11 @@ url: $BUILD_URL
       <presendScript></presendScript>
       <attachBuildLog>false</attachBuildLog>
       <compressBuildLog>false</compressBuildLog>
-      <saveOutput>false</saveOutput>
       <matrixTriggerMode>ONLY_PARENT</matrixTriggerMode>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.20">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.12">
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -308,18 +298,15 @@ url: $BUILD_URL
       </patterns>
       <deleteDirs>false</deleteDirs>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.11"/>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
-      <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
-        <timeoutMinutes>600</timeoutMinutes>
-      </strategy>
-      <operationList class="java.util.Arrays$ArrayList">
-        <a class="hudson.plugins.build_timeout.BuildTimeOutOperation-array">
-          <hudson.plugins.build__timeout.operations.FailOperation/>
-        </a>
-      </operationList>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.4"/>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.11">
+      <timeoutMinutes>600</timeoutMinutes>
+      <failBuild>true</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.2">
+    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.1">
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>

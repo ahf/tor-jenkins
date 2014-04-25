@@ -10,7 +10,7 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <job-metadata plugin="metadata@1.1.0b">
+    <job-metadata plugin="metadata@1.0b">
       <values class="linked-list">
         <metadata-tree>
           <name>job-info</name>
@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1398360534438</time>
+                    <time>1397674994664</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -49,7 +49,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -57,7 +57,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>
@@ -69,7 +69,7 @@
     </job-metadata>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
-  <assignedNode>Linux</assignedNode>
+  <assignedNode>master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -96,13 +96,12 @@
         <string>quantal</string>
         <string>raring</string>
         <string>saucy</string>
-        <string>trusty</string>
       </values>
     </hudson.matrix.LabelExpAxis>
   </axes>
   <combinationFilter></combinationFilter>
   <builders>
-    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.25">
       <projectName>tor-debian-024-nightly-source</projectName>
       <filter></filter>
       <target>incoming</target>
@@ -110,7 +109,6 @@
         <fallbackToLastSuccessful>false</fallbackToLastSuccessful>
       </selector>
       <flatten>true</flatten>
-      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>/home/jenkins/jenkins-tools/slaves/linux/tor-debian-master-nightly-binaries</command>
@@ -131,7 +129,7 @@
         <completeBuild>true</completeBuild>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.37.2.2">
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.27.1">
       <recipientList>tor-jenkins@commit.noreply.org</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
@@ -159,7 +157,7 @@
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
           </email>
-          <failureCount>1</failureCount>
+          <failureCount>0</failureCount>
         </hudson.plugins.emailext.plugins.trigger.FirstFailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.NotBuiltTrigger>
           <email>
@@ -264,12 +262,11 @@ url: $BUILD_URL
       <presendScript></presendScript>
       <attachBuildLog>false</attachBuildLog>
       <compressBuildLog>false</compressBuildLog>
-      <saveOutput>false</saveOutput>
       <matrixTriggerMode>ONLY_PARENT</matrixTriggerMode>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.20">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.12">
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -278,18 +275,15 @@ url: $BUILD_URL
       </patterns>
       <deleteDirs>false</deleteDirs>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.11"/>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
-      <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
-        <timeoutMinutes>600</timeoutMinutes>
-      </strategy>
-      <operationList class="java.util.Arrays$ArrayList">
-        <a class="hudson.plugins.build_timeout.BuildTimeOutOperation-array">
-          <hudson.plugins.build__timeout.operations.FailOperation/>
-        </a>
-      </operationList>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.4"/>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.11">
+      <timeoutMinutes>600</timeoutMinutes>
+      <failBuild>true</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.2">
+    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.1">
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>

@@ -4,7 +4,110 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <job-metadata plugin="metadata@1.0b">
-      <values class="linked-list"/>
+      <values class="linked-list">
+        <metadata-tree>
+          <name>job-info</name>
+          <parent class="job-metadata" reference="../../.."/>
+          <generated>true</generated>
+          <exposedToEnvironment>false</exposedToEnvironment>
+          <children class="linked-list">
+            <metadata-tree>
+              <name>last-saved</name>
+              <description></description>
+              <parent class="metadata-tree" reference="../../.."/>
+              <generated>true</generated>
+              <exposedToEnvironment>false</exposedToEnvironment>
+              <children class="linked-list">
+                <metadata-date>
+                  <name>time</name>
+                  <description></description>
+                  <parent class="metadata-tree" reference="../../.."/>
+                  <generated>true</generated>
+                  <exposedToEnvironment>false</exposedToEnvironment>
+                  <value>
+                    <time>1398474506837</time>
+                    <timezone>Etc/UTC</timezone>
+                  </value>
+                  <checked>false</checked>
+                </metadata-date>
+                <metadata-tree>
+                  <name>user</name>
+                  <parent class="metadata-tree" reference="../../.."/>
+                  <generated>true</generated>
+                  <exposedToEnvironment>false</exposedToEnvironment>
+                  <children class="linked-list">
+                    <metadata-string>
+                      <name>display-name</name>
+                      <description></description>
+                      <parent class="metadata-tree" reference="../../.."/>
+                      <generated>true</generated>
+                      <exposedToEnvironment>false</exposedToEnvironment>
+                      <value>unknown</value>
+                    </metadata-string>
+                    <metadata-string>
+                      <name>full-name</name>
+                      <description></description>
+                      <parent class="metadata-tree" reference="../../.."/>
+                      <generated>true</generated>
+                      <exposedToEnvironment>false</exposedToEnvironment>
+                      <value>unknown</value>
+                    </metadata-string>
+                  </children>
+                </metadata-tree>
+              </children>
+            </metadata-tree>
+            <metadata-tree>
+              <name>matrix</name>
+              <parent class="metadata-tree" reference="../../.."/>
+              <generated>true</generated>
+              <exposedToEnvironment>false</exposedToEnvironment>
+              <children class="linked-list">
+                <metadata-tree>
+                  <name>combination</name>
+                  <description></description>
+                  <parent class="metadata-tree" reference="../../.."/>
+                  <generated>true</generated>
+                  <exposedToEnvironment>false</exposedToEnvironment>
+                  <children class="linked-list">
+                    <metadata-string>
+                      <name>value</name>
+                      <description></description>
+                      <parent class="metadata-tree" reference="../../.."/>
+                      <generated>true</generated>
+                      <exposedToEnvironment>false</exposedToEnvironment>
+                      <value>ARCHITECTURE:amd64,SUITE:precise</value>
+                    </metadata-string>
+                    <metadata-tree>
+                      <name>axis</name>
+                      <parent class="metadata-tree" reference="../../.."/>
+                      <generated>true</generated>
+                      <exposedToEnvironment>false</exposedToEnvironment>
+                      <children class="linked-list">
+                        <metadata-string>
+                          <name>ARCHITECTURE</name>
+                          <description></description>
+                          <parent class="metadata-tree" reference="../../.."/>
+                          <generated>true</generated>
+                          <exposedToEnvironment>false</exposedToEnvironment>
+                          <value>amd64</value>
+                        </metadata-string>
+                        <metadata-string>
+                          <name>SUITE</name>
+                          <description></description>
+                          <parent class="metadata-tree" reference="../../.."/>
+                          <generated>true</generated>
+                          <exposedToEnvironment>false</exposedToEnvironment>
+                          <value>precise</value>
+                        </metadata-string>
+                      </children>
+                    </metadata-tree>
+                  </children>
+                </metadata-tree>
+              </children>
+            </metadata-tree>
+          </children>
+        </metadata-tree>
+      </values>
     </job-metadata>
   </properties>
   <scm class="hudson.scm.NullSCM"/>

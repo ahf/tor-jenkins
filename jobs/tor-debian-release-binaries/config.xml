@@ -10,7 +10,7 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <job-metadata plugin="metadata@1.1.0b">
+    <job-metadata plugin="metadata@1.0b">
       <values class="linked-list">
         <metadata-tree>
           <name>job-info</name>
@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1398360542789</time>
+                    <time>1395561045834</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -49,7 +49,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -57,7 +57,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>
@@ -69,7 +69,7 @@
     </job-metadata>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
-  <assignedNode>Linux</assignedNode>
+  <assignedNode>master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -96,13 +96,12 @@
         <string>quantal</string>
         <string>raring</string>
         <string>saucy</string>
-        <string>trusty</string>
       </values>
     </hudson.matrix.LabelExpAxis>
   </axes>
   <combinationFilter></combinationFilter>
   <builders>
-    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.25">
       <projectName>tor-debian-release-source</projectName>
       <filter></filter>
       <target>incoming</target>
@@ -110,7 +109,6 @@
         <fallbackToLastSuccessful>false</fallbackToLastSuccessful>
       </selector>
       <flatten>true</flatten>
-      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>/home/jenkins/jenkins-tools/slaves/linux/tor-debian-master-nightly-binaries</command>
@@ -289,7 +287,7 @@ url: $BUILD_URL
         </a>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.2">
+    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.1">
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>

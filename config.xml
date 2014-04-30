@@ -224,7 +224,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
       </jobNames>
       <jobFilters>
-        <hudson.views.JobStatusFilter plugin="view-job-filters@1.22">
+        <hudson.views.JobStatusFilter plugin="view-job-filters@1.26">
           <includeExcludeTypeString>includeMatched</includeExcludeTypeString>
           <unstable>false</unstable>
           <failed>true</failed>

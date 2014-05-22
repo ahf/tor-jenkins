@@ -237,6 +237,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedTrigger>
         <hudson.plugins.emailext.plugins.trigger.StillUnstableTrigger>

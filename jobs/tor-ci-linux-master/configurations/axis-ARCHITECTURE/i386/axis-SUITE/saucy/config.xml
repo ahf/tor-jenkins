@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <matrix-config>
+  <actions/>
   <keepDependencies>false</keepDependencies>
   <properties>
     <job-metadata plugin="metadata@1.0b">
@@ -24,7 +25,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1405529854494</time>
+                    <time>1405529908491</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -41,7 +42,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>unknown</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -49,7 +50,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>unknown</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>

@@ -167,6 +167,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
           <failureCount>1</failureCount>
         </hudson.plugins.emailext.plugins.trigger.FirstFailureTrigger>
@@ -194,6 +195,7 @@
             <sendToRecipientList>true</sendToRecipientList>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
+            <contentType>project</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.RegressionTrigger>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>

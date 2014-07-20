@@ -77,7 +77,7 @@
       <numExecutors>4</numExecutors>
       <mode>NORMAL</mode>
       <retentionStrategy class="hudson.slaves.RetentionStrategy$Demand">
-        <inDemandDelay>1</inDemandDelay>
+        <inDemandDelay>30</inDemandDelay>
         <idleDelay>30</idleDelay>
       </retentionStrategy>
       <launcher class="hudson.slaves.CommandLauncher">

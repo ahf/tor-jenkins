@@ -77,8 +77,8 @@
       <numExecutors>4</numExecutors>
       <mode>NORMAL</mode>
       <retentionStrategy class="hudson.slaves.RetentionStrategy$Demand">
-        <inDemandDelay>30</inDemandDelay>
-        <idleDelay>30</idleDelay>
+        <inDemandDelay>5</inDemandDelay>
+        <idleDelay>25</idleDelay>
       </retentionStrategy>
       <launcher class="hudson.slaves.CommandLauncher">
         <agentCommand>ssh jenkins@dixie.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>

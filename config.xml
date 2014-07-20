@@ -159,14 +159,14 @@
       <name>burlewii.torproject.org</name>
       <description></description>
       <remoteFS>/home/jenkins</remoteFS>
-      <numExecutors>4</numExecutors>
+      <numExecutors>6</numExecutors>
       <mode>NORMAL</mode>
       <retentionStrategy class="hudson.slaves.RetentionStrategy$Demand">
         <inDemandDelay>1</inDemandDelay>
-        <idleDelay>30</idleDelay>
+        <idleDelay>120</idleDelay>
       </retentionStrategy>
       <launcher class="hudson.slaves.CommandLauncher">
-        <agentCommand>ssh jenkins@dixie.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>
+        <agentCommand>ssh jenkins@burlewii.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>
       </launcher>
       <label>Linux Debian amd64 i386 squeeze wheezy lucid natty oneiric precise quantal sid experimental raring jessie saucy trusty</label>
       <nodeProperties/>

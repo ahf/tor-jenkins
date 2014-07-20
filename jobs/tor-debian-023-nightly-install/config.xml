@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1398535111723</time>
+                    <time>1405859022453</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -49,7 +49,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -57,7 +57,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>
@@ -80,14 +80,15 @@
     <hudson.tasks.Shell>
       <command>true</command>
     </hudson.tasks.Shell>
-    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.25">
-      <projectName>tor-debian-023-nightly-binaries</projectName>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
+      <project>tor-debian-023-nightly-binaries</project>
       <filter></filter>
       <target>incoming</target>
       <selector class="hudson.plugins.copyartifact.TriggeredBuildSelector">
         <fallbackToLastSuccessful>false</fallbackToLastSuccessful>
       </selector>
       <flatten>true</flatten>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>rsync -v incoming/*/* tordeb@palmeri.torproject.org:-overridden-server-side- &amp;&amp; ssh tordeb@palmeri.torproject.org dinstall</command>
@@ -232,7 +233,7 @@ url: $BUILD_URL
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.20">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.21">
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -241,8 +242,8 @@ url: $BUILD_URL
       </patterns>
       <deleteDirs>false</deleteDirs>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.11"/>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.12"/>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>600</timeoutMinutes>
       </strategy>
@@ -252,7 +253,7 @@ url: $BUILD_URL
         </a>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.1">
+    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.2">
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>

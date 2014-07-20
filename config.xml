@@ -50,7 +50,7 @@
     <permission>hudson.model.View.Read:Jenkins Administrator</permission>
     <permission>hudson.scm.SCM.Tag:Jenkins Administrator</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.2">
+  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.6">
     <server>ldaps://db.torproject.org</server>
     <rootDN>dc=torproject,dc=org</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>
@@ -62,7 +62,7 @@
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
-  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter">
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.0">
     <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
   </markupFormatter>
   <jdks/>
@@ -152,6 +152,23 @@
         <agentCommand>ssh jenkins@hedgei-vpn.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>
       </launcher>
       <label>Linux Debian armel armhf squeeze wheezy precise quantal sid experimental raring jessie saucy</label>
+      <nodeProperties/>
+      <userId>weasel</userId>
+    </slave>
+    <slave>
+      <name>burlewii.torproject.org</name>
+      <description></description>
+      <remoteFS>/home/jenkins</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Demand">
+        <inDemandDelay>1</inDemandDelay>
+        <idleDelay>30</idleDelay>
+      </retentionStrategy>
+      <launcher class="hudson.slaves.CommandLauncher">
+        <agentCommand>ssh jenkins@dixie.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>
+      </launcher>
+      <label>Linux Debian amd64 i386 squeeze wheezy lucid natty oneiric precise quantal sid experimental raring jessie saucy trusty</label>
       <nodeProperties/>
       <userId>weasel</userId>
     </slave>

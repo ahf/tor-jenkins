@@ -163,7 +163,7 @@
       <mode>NORMAL</mode>
       <retentionStrategy class="hudson.slaves.RetentionStrategy$Demand">
         <inDemandDelay>1</inDemandDelay>
-        <idleDelay>120</idleDelay>
+        <idleDelay>30</idleDelay>
       </retentionStrategy>
       <launcher class="hudson.slaves.CommandLauncher">
         <agentCommand>ssh jenkins@burlewii.torproject.org /home/jenkins/jenkins-tools/slaves/linux/start-slave.sh</agentCommand>

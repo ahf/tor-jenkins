@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1398535107537</time>
+                    <time>1405859016023</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -49,7 +49,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -57,7 +57,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>
@@ -118,32 +118,35 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.25">
-      <projectName>extern-windows-libevent</projectName>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
+      <project>extern-windows-libevent</project>
       <filter></filter>
       <target></target>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
       <flatten>false</flatten>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
-    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.25">
-      <projectName>extern-windows-openssl</projectName>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
+      <project>extern-windows-openssl</project>
       <filter></filter>
       <target></target>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
       <flatten>false</flatten>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
-    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.25">
-      <projectName>extern-windows-zlib</projectName>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
+      <project>extern-windows-zlib</project>
       <filter></filter>
       <target></target>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
         <stable>false</stable>
       </selector>
       <flatten>false</flatten>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>~/jenkins-tools/slaves/windows/build-wrapper</command>
@@ -293,7 +296,7 @@ url: $BUILD_URL
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.20">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.21">
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -302,8 +305,8 @@ url: $BUILD_URL
       </patterns>
       <deleteDirs>false</deleteDirs>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.11"/>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.12"/>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>600</timeoutMinutes>
       </strategy>
@@ -313,7 +316,7 @@ url: $BUILD_URL
         </a>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.1">
+    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.2">
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>

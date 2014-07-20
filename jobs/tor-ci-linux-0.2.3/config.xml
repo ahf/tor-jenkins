@@ -104,7 +104,6 @@
     <skipTag>false</skipTag>
     <scmName></scmName>
   </scm>
-  <assignedNode>Linux</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -278,7 +277,7 @@ url: $BUILD_URL
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.20">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.21">
       <patterns>
         <hudson.plugins.ws__cleanup.Pattern>
           <pattern>**</pattern>
@@ -287,8 +286,8 @@ url: $BUILD_URL
       </patterns>
       <deleteDirs>false</deleteDirs>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.11"/>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.12"/>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>600</timeoutMinutes>
       </strategy>
@@ -298,7 +297,7 @@ url: $BUILD_URL
         </a>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.1">
+    <matrixtieparent.BuildWrapperMtp plugin="matrixtieparent@1.2">
       <labelName>master</labelName>
     </matrixtieparent.BuildWrapperMtp>
   </buildWrappers>

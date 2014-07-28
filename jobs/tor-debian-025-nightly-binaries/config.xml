@@ -9,7 +9,11 @@
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <job-metadata plugin="metadata@1.0b">
+      <values class="linked-list"/>
+    </job-metadata>
+  </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
@@ -42,7 +46,7 @@
   <combinationFilter></combinationFilter>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
-      <projectName>tor-debian-025-nightly-source</projectName>
+      <project>tor-debian-025-nightly-source</project>
       <filter></filter>
       <target>incoming</target>
       <selector class="hudson.plugins.copyartifact.TriggeredBuildSelector">

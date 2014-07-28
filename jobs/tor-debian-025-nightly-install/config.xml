@@ -81,7 +81,7 @@
       <command>true</command>
     </hudson.tasks.Shell>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
-      <projectName>tor-debian-025-nightly-binaries</projectName>
+      <project>tor-debian-025-nightly-binaries</project>
       <filter></filter>
       <target>incoming</target>
       <selector class="hudson.plugins.copyartifact.TriggeredBuildSelector">

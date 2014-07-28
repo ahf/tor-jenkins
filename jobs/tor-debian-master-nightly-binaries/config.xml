@@ -100,7 +100,7 @@
   <combinationFilter></combinationFilter>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
-      <projectName>tor-debian-master-nightly-source</projectName>
+      <project>tor-debian-master-nightly-source</project>
       <filter></filter>
       <target>incoming</target>
       <selector class="hudson.plugins.copyartifact.TriggeredBuildSelector">

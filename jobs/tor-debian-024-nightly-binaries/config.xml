@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1406581881264</time>
+                    <time>1406745959344</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -49,7 +49,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -57,7 +57,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>
@@ -101,7 +101,7 @@
   <combinationFilter></combinationFilter>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
-      <projectName>tor-debian-024-nightly-source</projectName>
+      <project>tor-debian-024-nightly-source</project>
       <filter></filter>
       <target>incoming</target>
       <selector class="hudson.plugins.copyartifact.TriggeredBuildSelector">

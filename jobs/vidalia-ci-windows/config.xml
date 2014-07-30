@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1406581895865</time>
+                    <time>1406745964924</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -49,7 +49,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -57,7 +57,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>SYSTEM</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>
@@ -113,7 +113,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.30">
-      <projectName>extern-windows-qt</projectName>
+      <project>extern-windows-qt</project>
       <filter></filter>
       <target></target>
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector">

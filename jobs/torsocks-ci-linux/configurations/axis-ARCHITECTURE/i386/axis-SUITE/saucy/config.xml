@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<matrix-config>
+<matrix-config plugin="matrix-project@1.2">
   <keepDependencies>false</keepDependencies>
   <properties>
     <job-metadata plugin="metadata@1.0b">
@@ -24,7 +24,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1405519300060</time>
+                    <time>1406582075980</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>

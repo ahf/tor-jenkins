@@ -32,7 +32,7 @@
                   <generated>true</generated>
                   <exposedToEnvironment>false</exposedToEnvironment>
                   <value>
-                    <time>1413557680404</time>
+                    <time>1413747596253</time>
                     <timezone>Etc/UTC</timezone>
                   </value>
                   <checked>false</checked>
@@ -49,7 +49,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>git</value>
                     </metadata-string>
                     <metadata-string>
                       <name>full-name</name>
@@ -57,7 +57,7 @@
                       <parent class="metadata-tree" reference="../../.."/>
                       <generated>true</generated>
                       <exposedToEnvironment>false</exposedToEnvironment>
-                      <value>jenkins</value>
+                      <value>git</value>
                     </metadata-string>
                   </children>
                 </metadata-tree>
@@ -104,7 +104,6 @@
     <skipTag>false</skipTag>
     <scmName></scmName>
   </scm>
-  <assignedNode>Linux</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>

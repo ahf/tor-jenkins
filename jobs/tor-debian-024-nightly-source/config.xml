@@ -162,8 +162,10 @@
   <publishers>
     <hudson.tasks.ArtifactArchiver>
       <artifacts>RESULT/*</artifacts>
-      <latestOnly>false</latestOnly>
       <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>tor-debian-024-nightly-binaries</childProjects>

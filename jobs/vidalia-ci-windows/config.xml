@@ -129,8 +129,10 @@
   <publishers>
     <hudson.tasks.ArtifactArchiver>
       <artifacts>RESULT.vidalia.tar.gz</artifacts>
-      <latestOnly>false</latestOnly>
       <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.37.2.2">
       <recipientList>tor-jenkins@commit.noreply.org</recipientList>

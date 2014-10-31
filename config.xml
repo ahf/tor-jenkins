@@ -95,32 +95,6 @@
       <nodeProperties/>
     </slave>
     <slave>
-      <name>rabin</name>
-      <description>windows test VM</description>
-      <remoteFS>/cygwin/home/jenkins</remoteFS>
-      <numExecutors>1</numExecutors>
-      <mode>EXCLUSIVE</mode>
-      <retentionStrategy class="hudson.slaves.RetentionStrategy$Demand">
-        <inDemandDelay>10</inDemandDelay>
-        <idleDelay>30</idleDelay>
-      </retentionStrategy>
-      <launcher class="hudson.slaves.CommandLauncher">
-        <agentCommand>ssh -l jenkins -p 2222 localhost ~/bin/start-slave</agentCommand>
-      </launcher>
-      <label></label>
-      <nodeProperties>
-        <hudson.tools.ToolLocationNodeProperty>
-          <locations>
-            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
-              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
-              <name>Default</name>
-              <home>C:\Program Files (x86)\Git\cmd\git</home>
-            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
-          </locations>
-        </hudson.tools.ToolLocationNodeProperty>
-      </nodeProperties>
-    </slave>
-    <slave>
       <name>weissii.torproject.org</name>
       <description>Windows 7 build VM</description>
       <remoteFS>/cygwin/home/jenkins</remoteFS>

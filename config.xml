@@ -50,13 +50,21 @@
     <permission>hudson.model.View.Read:Jenkins Administrator</permission>
     <permission>hudson.scm.SCM.Tag:Jenkins Administrator</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.6">
+  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.11">
     <server>ldaps://db.torproject.org</server>
     <rootDN>dc=torproject,dc=org</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>
     <userSearchBase></userSearchBase>
     <userSearch>uid={0}</userSearch>
+    <groupMembershipStrategy class="jenkins.security.plugins.ldap.FromGroupSearchLDAPGroupMembershipStrategy">
+      <filter></filter>
+    </groupMembershipStrategy>
+    <managerPasswordSecret>atkaZQiiNc0Y1x5LMijCyA==</managerPasswordSecret>
     <disableMailAddressResolver>false</disableMailAddressResolver>
+    <displayNameAttributeName>displayname</displayNameAttributeName>
+    <mailAddressAttributeName>mail</mailAddressAttributeName>
+    <userIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
+    <groupIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
@@ -201,7 +209,6 @@
         <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
         <hudson.views.BuildButtonColumn/>
-        <org.jenkins.plugins.builton.BuiltOnColumn plugin="built-on-column@1.1"/>
         <hudson.plugins.nodenamecolumn.NodeNameColumn plugin="nodenamecolumn@1.1"/>
       </columns>
       <includeRegex>tor-.*</includeRegex>
@@ -225,7 +232,6 @@
         <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
         <hudson.views.BuildButtonColumn/>
-        <org.jenkins.plugins.builton.BuiltOnColumn plugin="built-on-column@1.1"/>
         <hudson.plugins.nodenamecolumn.NodeNameColumn plugin="nodenamecolumn@1.1"/>
       </columns>
       <includeRegex>.*-debian-.*</includeRegex>
@@ -258,7 +264,6 @@
         <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
         <hudson.views.BuildButtonColumn/>
-        <org.jenkins.plugins.builton.BuiltOnColumn plugin="built-on-column@1.1"/>
         <hudson.plugins.nodenamecolumn.NodeNameColumn plugin="nodenamecolumn@1.1"/>
       </columns>
       <recurse>false</recurse>
@@ -267,6 +272,9 @@
   <primaryView>All</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
   <label>master</label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>true</excludeClientIPFromCrumb>
+  </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties/>
 </hudson>

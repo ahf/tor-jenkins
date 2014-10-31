@@ -88,8 +88,10 @@
   <publishers>
     <hudson.tasks.ArtifactArchiver>
       <artifacts>RESULT/blog-snippets.wmi</artifacts>
-      <latestOnly>false</latestOnly>
       <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>website-build-webwml</childProjects>

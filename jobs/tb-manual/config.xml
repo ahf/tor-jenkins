@@ -159,8 +159,10 @@
   <publishers>
     <hudson.tasks.ArtifactArchiver>
       <artifacts>RESULT/html.tar.gz</artifacts>
-      <latestOnly>false</latestOnly>
       <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>tb-manual-install</childProjects>

@@ -119,8 +119,10 @@
   <publishers>
     <hudson.tasks.ArtifactArchiver>
       <artifacts>build-tree-tor/src/or/tor</artifacts>
-      <latestOnly>false</latestOnly>
       <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>stem-tor-ci</childProjects>
